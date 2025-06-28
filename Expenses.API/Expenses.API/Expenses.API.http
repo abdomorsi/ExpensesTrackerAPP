@@ -1,0 +1,39 @@
+@Expenses.API_HostAddress = http://localhost:5175
+
+### Expenses API
+GET /api/expenses
+@Expenses.API_HostAddress/api/expenses HTTP/1.1
+Host: localhost:5175
+Accept: application/json
+### Get all expenses
+GET /api/expenses/{id}
+@Expenses.API_HostAddress/api/expenses/{id} HTTP/1.1
+Host: localhost:5175
+Accept: application/json
+### Get expense by ID
+GET /api/expenses/{id}/details
+@Expenses.API_HostAddress/api/expenses/{id}/details HTTP/1.1
+Host: localhost:5175
+Accept: application/json
+### Get expense details by ID
+POST /api/expenses
+@Expenses.API_HostAddress/api/expenses HTTP/1.1
+Host: localhost:5175
+Content-Type: application/json
+{
+  "description": "string",
+  "amount": 0,
+  "date": "2023-10-01T00:00:00Z"
+}
+### Create a new expense
+PUT /api/expenses/{id}
+@Expenses.API_HostAddress/api/expenses/{id} HTTP/1.1
+Host: localhost:5175
+Content-Type: application/json
+{
+  "description": "string",
+  "amount": 0,
+  "date": "2023-10-01T00:00:00Z"
+}
+
+###
